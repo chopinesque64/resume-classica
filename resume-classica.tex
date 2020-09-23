@@ -1,7 +1,7 @@
 % -*- TeX-engine: xetex; -*-
 
 \documentclass{awesome-cv}
-\geometry{left=2.0cm, top=1cm, right=2.0cm, bottom=0.5cm, footskip=.5cm}
+\geometry{left=1.0cm, top=1.3cm, right=1.0cm, bottom=1.0cm, footskip=0cm}
 
 % -------------------------------------------------------------------------------
 % AwesomeCV Configuration
@@ -10,15 +10,15 @@
 % 1. Fonts.
 % Get the plan Latin Modern look back.
 \newcommand*{\lmr}{\fontfamily{lmr}\selectfont}
-% \fontdir[fonts/]
+\fontdir{}
 
 \renewcommand*{\footerfont}{\lmr}
 \renewcommand*{\bodyfont}{\lmr}
 
 % 2. Configuration styles.
 % Global font sizes
-\newcommand{\namefontsize}{\fontsize{30pt}{1em}}
-\newcommand{\bodyfontsize}{\fontsize{11.5pt}{1em}}
+\newcommand{\namefontsize}{\fontsize{24pt}{1em}}
+\newcommand{\bodyfontsize}{\fontsize{10.5pt}{1em}}
 
 % Fundamental structures.
 \renewcommand*{\headerfirstnamestyle}[1]{{\namefontsize\bodyfont\color{text} #1}}
@@ -62,7 +62,7 @@
 
 % -------------------------------------------------------------------------------
 
-\photo[circle]{npjg-2018.jpg}{1cm}
+%\photo[circle]{npjg-2018.jpg}{1cm}
 \name{Nathanael}{Gentry}
 
 \mobile{(808) 859-0779}
@@ -71,9 +71,15 @@
 % \linkedin{nathanael-gentry}
 % \quote{Seeking an analytics internship or research experience for summer 2020.}
 
-\begin{document}
-\makecvheader[L]
+\usepackage[super]{nth}
 
+\begin{document}
+\makecvheader[C]
+
+%\makecvfooter
+%  {\today}
+%  {Nathanael Gentry~~~·~~~Resume}
+%  {\thepage}
 
 % Education
 \cvsection{Education}
@@ -86,10 +92,10 @@
   {\textbf{GPA: 4.00}}
   {
     \begin{cvlabeleditems}
-    \item{Minors}{Computer Science and Philosophy}
-    \item[2]{Skills}{C++, Python, Emacs Lisp, R, Java, CoffeeScript, AJAX, HTML,
-        Mathematica, Sage, \TeX{}, Bash, VBA}
-    \item{Societies}{Honors Program, KME Mathematics Honors Society}
+    \item{Minors}{Computer Science and Piano Performance}
+    \item[2]{Skills}{C++, Python, Emacs Lisp, R, JavaScript, Ajax, Lilypond,
+        XPath, jQuery, HTML/CSS, Mathematica, Sage, \TeX{}, Bash, VBA}
+    \item{Societies}{Honors Program, Concert Choir, Formula SAE}
     \end{cvlabeleditems}
   }
 \end{cventries}
@@ -106,10 +112,22 @@
   {\entrydatestyle{Spring 2019}}
   {}
   {
-    A synthesis of the basic eigentheory underlying Google's Web
-    page ranking algorithm, written as an honors project in linear algebra. To
-    be published in \textit{The Kabod}, a Liberty University student journal.
+    A synthesis of the eigentheory underlying Google's ranking method, written as an honors project in linear algebra.
   }
+
+  %\cventry
+  %{Warranted Christian Belief and the Inadequacy Thesis}
+  %{}
+  %{\entrydatestyle{Spring 2020}}
+  %{}
+  %{Presented at the first annual Liberty University Undergraduate Philosophy Conference}
+
+  \cventry
+  {Active-Adaptive Control for Dielectric Elastomer-Based Robotics: A Review}
+  {}
+  {\entrydatestyle{Fall 2020}}
+  {}
+  {A literature review paper from the Liberty University Mechatronics Research Lab.}
 \end{cventries}
 
 
@@ -118,19 +136,28 @@
 
 \begin{cventries}
   \cventry
-  {Liberty Mathematics}
-  {Student Researcher}
+  {Google Summer of Code (ScummVM)}
+  {Software Engineer Intern}
   {}
-  {Fall 2019}
+  {Summer 2020 -- Present}
   {
     \begin{cvitems}
-    \item Implemented a REST-ful backend for \TeX{} Math Here, a browser extension
-      that brings \TeX{} mathematical typesetting to popular Web interfaces (e.g.
-      Google Docs and Gmail).
-    \item Developed continuous integration and version control schemes
-      for the \TeX{} Math Here codebase.
-    \item Performed preliminary research on modernizing T.V. Raman's \TeX{}-to-speech engine
-      into a robust assistive technology package for Web-based mathematical resources.
+      \item Currently collaborating on a reimplementation of Macromedia Director, targeting hundreds of content titles.
+      \item Gained experience with C++ graphics programming in a complete redesign of the engine's rendering pipeline.
+      \item Introduced to reverse-engineering with Ghidra and custom software tools.
+    \end{cvitems}
+  }
+
+  \cventry
+  {Departments of Mathematics and Engineering}
+  {Student Researcher}
+  {}
+  {Spring 2019 -- Present}
+  {
+    \begin{cvitems}
+    \item Currently working with the Mechatronics Research Lab (Dr. Hector Medina) to implement Python machine-learning control for using dielectric elastomers to stabilize laser communication systems.
+    \item Refined a Web interface and implemented a backend for \TeX{} Math Here, a browser extension that brings mathematical typesetting to popular Web interfaces. \textit{(2020 Research Week \nth{1} Place Undergraduate Applied Oral Presentation)}
+    \item Built an Excel VBA application and database framework to calculate Formula SAE Electric competition scores from racing vehicle simulations produced in OptimumLap.
     \end{cvitems}
   }
 
@@ -141,41 +168,20 @@
   {Summer 2019}
   {
     \begin{cvitems}
-    \item Started several open-source projects, including \TeX{} packages and
-      Emacs extensions.
+    \item Started several open-source projects, including Emacs extensions and a \TeX{} package.
     \item Volunteered 25+ hours at a large food bank for database migration and
      documentation updates.
-    \item Served as volunteer consultant/designer for several religious ministries'
-      websites and mobile apps.
-    \end{cvitems}
-  }
-
-
-  \cventry
-  {Liberty Motorsports}
-  {Formula SAE Simulation-Analysis Developer}
-  {}
-  {Spring 2019}
-  {
-    \begin{cvitems}
-    \item Built an Excel VBA application to calculate simulated Formula SAE Electric
-      competition scores.
-    \item Helped formalize conversions from internal-combustion lap simulations
-      to electric motor equivalents.
-    \item Designed a database system to compare race simulations and
-      pinpoint significant design changes.
     \end{cvitems}
   }
 
   \cventry
-  {COMPACFLT}
+  {COMPACFLT (Pearl Harbor)}
   {Department of the Navy Pathways Intern (GS-04)}
   {}
   {Summer 2018}
   {
     \begin{cvitems}
-    \item Designed service containers for naval network software
-      development; gained familiarity with Ruby.
+    \item Learned Python and shell scripting by implementing Docker service containerization for naval network software development; gained familiarity with Ruby.
     \item Optimized development environment and documentation for new network
       developers.
     \item Streamlined asset delivery and media inventory for technical refresh of
@@ -184,17 +190,13 @@
   }
 \end{cventries}
 
-
-% Activities
-\cvsection{Activities}
-
-\begin{cvparagraph}
+% Rewards.
+\cvsection{Awards}
   \vspace{14pt}
   \descriptionstyle{
     \begin{cvlabeleditems}
-    \item{Choral Ensembles}{Timberlake Chorale, Liberty Univeristy Concert
-        Choir}
-    \item{Elective Piano}{Liberty University Piano Showcase, Library Pianist}
+    \item{Wooldridge Award}{2020. Awarded to one rising senior math major for academic achievement and service.}
+    \item{Research Week}{2020. Undergrad Research Week, for \TeX{} Math Here browser extension project.}
+    \item{Piano Showcase}{2018, 2019. Competitively-placed classical performance in the grand concert hall.}
     \end{cvlabeleditems}}
-\end{cvparagraph}
 \end{document}
